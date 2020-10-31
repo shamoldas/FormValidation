@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS `registration` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` char(40) NOT NULL,
+  `email` varchar(40),
+  `city` varchar(50) ,
+  `phone` bigint(13) ,
+  `amount` int(40),
+  `receipt_id` varchar(40),
+  `note` varchar(50),
+  `u_ip` date ,
+  `entry at` timestamp ,
+  `coupon` varchar(20),
+  PRIMARY KEY (`id`),  
+  UNIQUE KEY `email` (`email`),
+  FULLTEXT KEY `name` (`name`)
+);
